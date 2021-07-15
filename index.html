@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="description" content="Form page for Pluto Planethood Petition">
     <meta name="keywords" content="Pluto, Planethood, Petition">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pluto Planethood Petition</title>
     <link rel="stylesheet" href="assets/stylesheets/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,9 +14,87 @@
 </head>
 
 <body>
-
-    <h1> Hello World!</h1>
+    <form action="results.html" method="GET" enctype="multipart/form-data">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="username" required>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <div>
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age" min="0" max="200" step="1">
+        </div>
+        <div>
+            <label for="date">Birthdate</label>
+            <input type="date" name="date" id="date">
+        </div>
+        <div>
+            Favorite Food
+            <div>
+                <label for="apple">Apple</label>
+                <input type="checkbox" name="apple" id="apple">
+            </div>
+            <div>
+                <label for="banana">Banana</label>
+                <input type="checkbox" name="banana" id="banana">
+            </div>
+        </div>
+        <div>
+            Gender
+            <div>
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="male" value="male">
+            </div>
+            <div>
+                <label for="female">female</label>
+                <input type="radio" name="gender" id="female" value="female">
+            </div>
+        </div>
+        <div>
+            <label for="eyeColor">Eye Color</label>
+            <select name="eyeColor" id="eyeColor">
+                <option value="Green">Green</option>
+                <option label="Red" value="Red">Red</option>
+                <option value="Blue">Blue</option>
+                <option label="Yellow" value="Yellow">Yellow</option>
+            </select>
+        </div>
+        <div>
+            <label for="bio">Bio</label>
+            <textarea id="bio" name="bio"></textarea>
+        </div>
+        <div>
+            <input type="hidden" name="hidden" value="testhi">
+        </div>
+        <div>
+            <label for="file">File</label>
+            <input id="file" type="file" name="file">
+        </div>    
+        <div>
+            <label for="phone">Phone</label>
+            <input id="phone" type="tel" name="phone">
+        </div>
+        <div>
+            <label for="url">URL</label>
+            <input id="url" type="url" name="url">
+        </div>  
+        <div>
+            <label for="color">Color</label>
+            <input id="color" type="color" name="color">
+        </div>          
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="password" required>
+        </div>
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+    </form>
 
 
 </body>
 </html>
+
+
