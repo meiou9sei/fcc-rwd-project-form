@@ -46,3 +46,32 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+
+/**************************
+	Background Image
+**************************
+body {
+	background-image: url("/assets/images/plutoandcharon.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-color: #000000;
+}
+**************************
+	Boxes
+**************************/
+
+/* Use this later
+#form-container {
+	
+}
+*/
+
+/**************************
+	Text
+**************************/
+
+h1 {
+	color: white;
+}
