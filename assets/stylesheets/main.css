@@ -50,7 +50,7 @@ table {
 
 /**************************
 	Background Image
-**************************
+**************************/
 body {
 	background-image: url("/assets/images/plutoandcharon.jpg");
 	background-repeat: no-repeat;
@@ -58,9 +58,14 @@ body {
 	background-position: center;
 	background-color: #000000;
 }
-**************************
+
+/**************************
 	Boxes
 **************************/
+
+.title-header {
+	
+}
 
 /* Use this later
 #form-container {
@@ -72,6 +77,31 @@ body {
 	Text
 **************************/
 
-h1 {
+body {
 	color: white;
+	font-family: 'Roboto Mono', monospace;
+}
+
+h1 {
+	font-size: 72px;
+}
+
+#title-header-sub {
+	font-size: 48px;
+}
+
+/**************************
+	Silly Stuff
+**************************/
+
+input[type="radio"]:checked#no-planethood + label {
+	color: red;
+}
+
+.denial-visible {
+	visibility: collapse;
+}
+
+#no-planethood:checked ~ * .denial-visible {
+	visibility: visible;
 }

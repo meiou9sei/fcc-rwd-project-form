@@ -10,15 +10,15 @@
     <link rel="stylesheet" href="assets/stylesheets/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;600&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
 <!-- actual page -->
 <main>
-    <header id="title-header">
-    <h1>Pluto's Planethood Petition<h1>
-        <p>Help reestablish Pluto as the 9th Planet!</p>
+    <header class="title-header">
+    <h1>Pluto's Planethood Petition</h1>
+        <p id="title-header-sub">Help reestablish Pluto as the 9th Planet!</p>
     </header>
     <form action="results.html" method="GET" enctype="multipart/form-data" id="form-container">
         <div class="form-group">
@@ -35,10 +35,12 @@
         </div>
         <div class="form-group">
             <p>Do you believe Pluto should be a planet?</p>
+
                 <input type="radio" name="planethood" id="yes-planethood" value="yes-planethood" checked="">
                 <label for="yes-planethood">Yes</label>
                 <input type="radio" name="planethood" id="no-planethood" value="no-planethood">
-                <label for="no-planethood">No, I am in denial</label>
+                <label for="no-planethood">No<span class="denial-visible">, I am a sinner in denial</span></label>
+
         </div>
         <div class="form-group">
             <label for="favorite-planet">Your favorite planet</label>
@@ -123,32 +125,32 @@
         <div class="formgroup">
             <p>Which of the following would you like to see done for Pluto?<span class="description-subtext">(Check all that apply)</span></p>
                 <div>
-                    <label for="for-pluto-1">Investing and developing space-travel and tourism infrastructure for Pluto</label>
                     <input type="checkbox" name="for-pluto-1" id="for-pluto-1">
+                    <label for="for-pluto-1">Investing and developing space-travel and tourism infrastructure for Pluto</label>
                 </div>
                 <div>
-                    <label for="for-pluto-2">Engraving Pluto on Mt. Rushmore</label>
                     <input type="checkbox" name="for-pluto-2" id="for-pluto-2">
+                    <label for="for-pluto-2">Engraving Pluto on Mt. Rushmore</label>
                 </div>
                 <div>
-                    <label for="for-pluto-3">Teaching Critical Planet Theory in public schools</label>
                     <input type="checkbox" name="for-pluto-3" id="for-pluto-3">
+                    <label for="for-pluto-3">Teaching Critical Planet Theory in public schools</label>
                 </div>
                 <div>
-                    <label for="for-pluto-4">New national holiday dedicated to Pluto</label>
                     <input type="checkbox" name="for-pluto-4" id="for-pluto-4">
+                    <label for="for-pluto-4">New national holiday dedicated to Pluto</label>
                 </div>
                 <div>
-                    <label for="for-pluto-5">Pluto monument in the National Mall</label>
                     <input type="checkbox" name="for-pluto-5" id="for-pluto-5">
+                    <label for="for-pluto-5">Pluto monument in the National Mall</label>
                 </div>
                 <div>
-                    <label for="for-pluto-6">Renaming Wyoming to Plutoming</label>
                     <input type="checkbox" name="for-pluto-6" id="for-pluto-6">
+                    <label for="for-pluto-6">Renaming Wyoming to Plutoming</label>
                 </div>
                 <div>
-                    <label for="for-pluto-7">Reparations for Pluto</label>
                     <input type="checkbox" name="for-pluto-7" id="for-pluto-7">
+                    <label for="for-pluto-7">Reparations for Pluto</label>
                 </div>
         </div>
        <div class="form-group">
@@ -169,7 +171,7 @@
         </div> 
         <div class="form-group">
             <label for="suggestions">Any comments or suggestions?</label>
-            <textarea placeholder="Enter your suggestion here..." id="suggestions" name="suggestions"></textarea>
+            <textarea placeholder="Enter your comment here..." id="suggestions" name="suggestions"></textarea>
         </div>   
         <div class="form-group">
             <button id="submit" class="submit-button" type="submit">Submit</button>
