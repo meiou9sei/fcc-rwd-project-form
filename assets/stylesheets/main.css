@@ -54,32 +54,72 @@ table {
 body {
 	background-image: url("/assets/images/plutoandcharon.jpg");
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: 130%;
 	background-position: center;
 	background-color: #000000;
+	background-attachment: fixed;
 }
 
 /**************************
 	Boxes
 **************************/
 
-.title-header {
-	
+.container {
+	max-width: 720px;
+	margin: auto
 }
 
-/* Use this later
 #form-container {
-	
+	background-color: rgba(44, 51, 61, 0.9);
+	border-radius: 5px;
 }
-*/
+
+#questions-container {
+	padding: 2.5rem;
+}
+
+.form-group {
+	margin-bottom: 24px;
+}
+
+.box-input {
+	display: block;
+	width: 100%;
+	border-radius: 5px;
+}
+
+label {
+	display: flex;
+	margin-bottom: 12px;
+}
+
+.submit-button {
+	width: 100%;
+	margin: auto;
+	background-color: orange;
+	border: none;
+	padding: 10px;
+	font-family:'Roboto Mono', monospace;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 5px;
+}
+
+.submit-button:hover {
+	background-color: orangered;
+}
 
 /**************************
 	Text
 **************************/
 
 body {
-	color: white;
+	color: rgb(9, 255, 0);
 	font-family: 'Roboto Mono', monospace;
+}
+
+.title-header {
+	text-align: center;
 }
 
 h1 {
@@ -88,6 +128,19 @@ h1 {
 
 #title-header-sub {
 	font-size: 48px;
+}
+
+form {
+	color: rgb(255, 255, 255);
+	font-size: 24px;
+}
+
+.description-subtext {
+	font-size: 18px;
+}
+
+.prompt {
+	font-size: 24px;
 }
 
 /**************************
