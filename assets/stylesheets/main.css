@@ -86,18 +86,26 @@ body {
 	display: block;
 	width: 100%;
 	border-radius: 5px;
+	padding: 8px 8px;
+	box-sizing: border-box;
+	margin-top: 12px;
 }
 
-label {
-	display: flex;
-	margin-bottom: 12px;
+.radio-container {
+	margin-top: 18px;
+}
+
+.denkmal-pluto-container {
+	padding: 10px 30px;
+	line-height: 30px;
 }
 
 .submit-button {
 	width: 100%;
 	margin: auto;
-	background-color: orange;
+	background-color: green;
 	border: none;
+	color: white;
 	padding: 10px;
 	font-family:'Roboto Mono', monospace;
 	font-size: 16px;
@@ -106,7 +114,7 @@ label {
 }
 
 .submit-button:hover {
-	background-color: orangered;
+	background-color: darkgreen;
 }
 
 /**************************
@@ -114,8 +122,8 @@ label {
 **************************/
 
 body {
-	color: rgb(9, 255, 0);
 	font-family: 'Roboto Mono', monospace;
+	font-weight: 300;
 }
 
 .title-header {
@@ -123,11 +131,15 @@ body {
 }
 
 h1 {
-	font-size: 72px;
+	font-size: 4vw;
+	margin-top: 40px;
+	color: rgb(9, 255, 0);
 }
 
 #title-header-sub {
-	font-size: 48px;
+	font-size: 2vw;
+	margin: 15px;
+	color: rgb(255, 145, 0);
 }
 
 form {
@@ -135,12 +147,22 @@ form {
 	font-size: 24px;
 }
 
-.description-subtext {
-	font-size: 18px;
-}
-
 .prompt {
 	font-size: 24px;
+	font-weight: 600;
+}
+
+.description-subtext {
+	font-size: 18px;
+	font-weight: 300;
+}
+
+.denkmal-pluto-container {
+	font-size: 18px
+}
+
+.box-input {
+	font-size: 18px;
 }
 
 /**************************
@@ -157,4 +179,18 @@ input[type="radio"]:checked#no-planethood + label {
 
 #no-planethood:checked ~ * .denial-visible {
 	visibility: visible;
+}
+
+input + label {
+	padding: 0px 5px;
+	border-radius: 12px;
+}
+
+input:hover + label {
+	background-color: #7c6f67;
+}
+
+input:checked + label {
+	background-color: rgb(255, 145, 0);
+	color: black;
 }
