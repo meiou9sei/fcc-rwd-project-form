@@ -15,7 +15,6 @@
 
 <body>
 <!-- actual page -->
-<div class="container">
 <main>
     <header class="title-header">
     <h1>Pluto's Planethood Petition</h1>
@@ -33,7 +32,7 @@
         </div>
         <div class="form-group">
             <label class="prompt" for="age">Age <span class="description-subtext">(optional)</span></label>
-            <input class="box-input" type="number" name="age" id="age">
+            <input class="box-input" type="number" min="0" max="150" name="age" id="age">
         </div>
         <div class="form-group">
             <p class="prompt">Do you believe Pluto should be a planet?</p>
@@ -41,7 +40,7 @@
                 <input type="radio" name="planethood" id="yes-planethood" value="yes-planethood" checked="">
                 <label for="yes-planethood">Yes</label>
                 <input type="radio" name="planethood" id="no-planethood" value="no-planethood">
-                <label for="no-planethood">No<span class="denial-visible">, I am a sinner in denial</span></label>
+                <label for="no-planethood" id="deny-me">No<span class="denial-visible">, I am a sinner in denial</span></label>
             </div>
         </div>
         <div class="form-group">
@@ -160,14 +159,19 @@
        <div class="form-group">
             <p class="prompt">Subscribe to our Weekly Newsletter? <span class="description-subtext">We can update you on our activities and send news and memes about Pluto</span></p>
                 <div class="radio-container">
-                    <input type="radio" name="newsletter" id="yes-newsletter" value="yes-newsletter" checked="">
-                    <label for="yes-newsletter">Yes</label>
-                    <input type="radio" name="newsletter" id="no-newsletter" value="no-newsletter">
-                    <label for="no-newsletter">No</label>
-                    <input type="radio" name="newsletter" id="memes-newsletter" value="memes-newsletter">
-                    <label for="memes-newsletter">Only send the memes</label>
+                    <div id="that-long-answer-floater">
+                        <input type="radio" name="newsletter" id="yes-newsletter" value="yes-newsletter" checked="">
+                        <label for="yes-newsletter">Yes</label>
+                        <input type="radio" name="newsletter" id="no-newsletter" value="no-newsletter">
+                        <label for="no-newsletter">No</label>
+                    </div>
+                    <div id="that-long-answer">
+                        <input type="radio" name="newsletter" id="memes-newsletter" value="memes-newsletter">
+                        <label for="memes-newsletter">Only send the memes</label>
+                    </div>
                 </div>
             </div>
+        <div id="terrible-bandaid"></div>
         <div class="form-group">
             <p class="prompt">Would you like to volunteer for our organization? <span class="description-subtext">We can send you an email with more information if you are interested</span></p>
                 <div class="radio-container">
@@ -179,7 +183,7 @@
             </div> 
         <div class="form-group">
             <label  class="prompt"for="suggestions">Any comments or suggestions?</label>
-            <textarea class="box-input" placeholder="Enter your comment here..." id="suggestions" name="suggestions"></textarea>
+            <textarea rows="10" class="box-input" placeholder="Enter your comment here..." id="suggestions" name="suggestions"></textarea>
         </div>   
         <div class="form-group">
             <button id="submit" class="submit-button" type="submit">Submit</button>
@@ -191,7 +195,6 @@
     <br><a href=https://github.com/meiousei9/fcc-rwd-project-form>See the code for this webpage</a>.</p> 
     <p id="copyright-text"><small>Copyright &copy; 2021, Pluto Planethood Movement</small></p>
 </footer>
-</div>
 
 <!-- form template
     <form action="results.html" method="GET" enctype="multipart/form-data">

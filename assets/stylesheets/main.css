@@ -64,12 +64,9 @@ body {
 	Boxes
 **************************/
 
-.container {
-	max-width: 720px;
-	margin: auto
-}
-
 #form-container {
+	max-width: 720px;
+	margin: auto;
 	background-color: rgba(44, 51, 61, 0.9);
 	border-radius: 5px;
 	margin-bottom: 10px;
@@ -83,6 +80,11 @@ body {
 	margin-bottom: 24px;
 }
 
+#terrible-bandaid {
+	clear: both;
+	padding-top: 24px;
+}
+
 .box-input {
 	display: block;
 	width: 100%;
@@ -92,13 +94,31 @@ body {
 	margin-top: 12px;
 }
 
-.radio-container {
-	margin-top: 18px;
+input:focus {
+	outline: none;
+	border-color:rgb(9, 255, 0)
+}
+
+textarea:focus {
+	outline: none;
+	border-color:rgb(9, 255, 0)
 }
 
 .denkmal-pluto-container {
 	padding: 10px 30px;
 	line-height: 30px;
+}
+
+#that-long-answer-floater {
+	float: left;
+}
+
+#that-long-answer {
+	float: left;
+}
+
+#terrible-bandaid {
+	margin-top: 24px;
 }
 
 .submit-button {
@@ -114,7 +134,7 @@ body {
 	border-radius: 5px;
 }
 
-.submit-button:hover {
+.submit-button:focus {
 	background-color: darkgreen;
 }
 
@@ -185,11 +205,20 @@ small {
 }
 
 /**************************
+	responsiveness
+**************************/
+@media (max-width: 1200px) {
+	.title-header h1 {font-size: 48px;}
+	.title-header #title-header-sub {font-size: 24px;}
+}
+
+
+/**************************
 	Silly Stuff
 **************************/
 
 input[type="radio"]:checked#no-planethood + label {
-	color: red;
+	color: rgb(255, 0, 0);
 }
 
 .denial-visible {
@@ -201,7 +230,8 @@ input[type="radio"]:checked#no-planethood + label {
 }
 
 input + label {
-	padding: 0px 5px;
+	line-height: 35px;
+	padding: 0 5px;
 	border-radius: 12px;
 }
 
@@ -212,4 +242,8 @@ input:hover + label {
 input:checked + label {
 	background-color: rgb(255, 145, 0);
 	color: black;
+}
+
+input[type="radio"]:checked#no-planethood + label {
+	background-color: rgb(0, 0, 0);
 }
